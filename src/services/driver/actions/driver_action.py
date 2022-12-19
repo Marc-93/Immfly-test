@@ -29,7 +29,24 @@ class DriverActions(object):
         try:
             element_list = self.element.get_element(element_info, stop, time_out)
             Select(element_list).select_by_value(value)
+
             Logger(f"[dropdown] value: {value}, result: selected").substep_passed()
+        except:
+            Logger(f"[dropdown] Not element found").substep_failed()
+
+    def get_text_from_dropdown(self, element_info, stop=0.0, time_out=1):
+        """Clicks the element selected.
+
+        :param element_info: method + locator
+        :param stop: stop hardcoded time
+        :param time_out: max time out
+        """
+        try:
+            element_list = self.element.get_element(element_info, stop, time_out)
+            text = Select(element_list).first_selected_option.text
+
+            Logger(f"[dropdown] text: {text}").substep_passed()
+            return text
         except:
             Logger(f"[dropdown] Not element found").substep_failed()
 
