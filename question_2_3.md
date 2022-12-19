@@ -1,4 +1,4 @@
-### [TC LIST](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/TC-list.png)
+### [TC LIST](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/TestList.png)
 
 ### ACCEPTANCE CRITERIA
 #### [IMMFLY-1](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/IMMFLY-1.png)
