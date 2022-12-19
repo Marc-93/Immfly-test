@@ -18,7 +18,7 @@ def before_all(context):
     set_execution_platform(context)
 
     # Sets qase publication for test execution (true: publish tests, false: not publish test)
-    set_qase_test_run(context, "IMMFLY")
+    set_qase_test_run(context)
 
 
 def before_scenario(context, scenario):

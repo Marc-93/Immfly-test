@@ -82,7 +82,7 @@ def set_execution_platform(context):
         context.capabilities = get_capabilities(iphone_capabilities)
 
 
-def set_qase_test_run(context, platform):
+def set_qase_test_run(context):
     # Sets deactivated by default
     context.initialize_qase = False
 
@@ -91,7 +91,7 @@ def set_qase_test_run(context, platform):
     try:
         if context.initialize_qase is True:
             # Send the request to create the test run
-            context.qase_run_id = Qase().publish_test_run(platform, context.server_name)
+            context.qase_run_id = Qase().publish_test_run()
 
             # Prints the qase test run is created.
             FormattedPrint("Qase", "Publishing test suite on Qase!").pink()

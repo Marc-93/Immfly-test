@@ -17,34 +17,22 @@ headers = {
     "Token": qase_admin_token,
 }
 
-server_id = {"dev": 1,
-             "localhost": 2,
-             "pre": 3}
-
 current_date = str(date.today().strftime("%d/%m/%Y"))
 
 
 class Qase:
-    def __get_server_id(self, server):
-        try:
-            return server_id[server]
-        except:
-            return None
-
-    def publish_test_run(self, environment, server):
+    def publish_test_run(self):
         """Creates new test run on qase by API request
 
         :param environment: Backend, webapp, apps
         :param server: dev, localhost
         :return: test_run_id
         """
-        env_id = self.__get_server_id(server)
-        title = f"[{environment}] Front end tests - {current_date}"
+        title = f"[IMMFLy] Front end tests - {current_date}"
 
         payload = json.dumps({
             "title": title,
             "description": "E2E Immfly test cases.",
-            "environment_id": env_id,
             "cases": [1]
         })
 
