@@ -1,0 +1,14 @@
+allure-behave
+Appium-Python-Client
+behave
+boto3
+ecdsa
+factory-boy
+Faker
+psycopg2-binary
+pyfiglet
+pyyaml
+requests
+selenium
+webdriver-manager
+pandas
