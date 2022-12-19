@@ -1,5 +1,5 @@
 import allure
-from selenium.webdriver import Keys
+from selenium.webdriver.support.select import Select
 
 from src.services.logs.formatted_print import FormattedPrint
 from src.services.logs.logger import Logger
@@ -18,6 +18,20 @@ class DriverActions(object):
         self.platform = platform
         self.element = Element(self.driver, self.platform)
         self.scroll = Scroll(self.driver, self.platform)
+
+    def select_option_by_value(self, element_info, value, stop=0.0, time_out=1):
+        """Clicks the element selected.
+
+        :param element_info: method + locator
+        :param stop: stop hardcoded time
+        :param time_out: max time out
+        """
+        try:
+            element_list = self.element.get_element(element_info, stop, time_out)
+            Select(element_list).select_by_value(value)
+            Logger(f"[dropdown] value: {value}, result: selected").substep_passed()
+        except:
+            Logger(f"[dropdown] Not element found").substep_failed()
 
     def click(self, element_info, stop=0.0, time_out=1):
         """Clicks the element selected.
@@ -48,22 +62,6 @@ class DriverActions(object):
             Logger(f"[type] locator: {element_info[self.platform]['locator']}, text: {text}, result: not typed")\
                 .substep_failed()
 
-    def clear_password(self, element_info, retries=4, stop=0.0, time_out=1):
-        """Clearing the password field by clicking backspace key.
-
-        :param element_info: method + locator
-        :param retries: times to repeat the action
-        :param stop: stop hardcoded time
-        :param time_out: max time out
-        """
-        try:
-            for iteration in range(retries):
-                self.element.get_element(element_info, stop, time_out).send_keys(Keys.BACKSPACE)
-            Logger(f"[clear] - locator: {element_info[self.platform]['locator']}, result: clean")\
-                .substep_passed()
-        except:
-            Logger(f"[clear] - locator: {element_info[self.platform]['locator']}, result: nothing to clean")\
-                .substep_passed()
 
     def scroll_to_element(self, element_info, max_scrolls=10, direction="down", stop=0, time_out=1):
         """Executes scrolls until element is found or maximum of scrolls allowed.
