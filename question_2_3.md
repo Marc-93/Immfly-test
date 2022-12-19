@@ -10,7 +10,7 @@
 #### [IMMFLY-7](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/IMMFLY-7.png)
 #### [IMMFLY-8](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/IMMFLY-8.png)
 
-### CORNER CASES
+### EDGE CASES
 #### [IMMFLY-9](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/IMMFLY-9.png)
 #### [IMMFLY-10](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/IMMFLY-10.png)
 #### [IMMFLY-11](https://github.com/Marc-93/Immfly-test/blob/main/QASE%20screenshots/IMMFLY-11.png)
