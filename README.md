@@ -16,9 +16,9 @@ between all team members.
 * **config runners:** config files with test run launchers for pycharm professional.
 
 * **Setup:** requirement file, it allows to install all the libraries to execute the test suite.
-* Clone the repository in any local path
-* Execute the following command: $ pip install -r <your_path>/requirements.txt
-* Install allure with brew: $ brew install allure
+     * Clone the repository in any local path
+     * Execute the following command: $ pip install -r <your_path>/requirements.txt
+     * Install allure with brew: $ brew install allure
 
 * **src:**
      * allure: folder to storage the test reports. 
