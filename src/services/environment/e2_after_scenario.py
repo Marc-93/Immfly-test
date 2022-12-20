@@ -11,9 +11,9 @@ def get_test_id(context):
     """
     # Checks for all tags in current scenario if there is a param with qase value
     for tag in context.tags:
-        if 'bling-' in str(tag).lower():
+        if 'immfly-' in str(tag).lower():
             # Formats the test id
-            context.test_id = str(tag).lower().replace("bling-", "")
+            context.test_id = str(tag).lower().replace("immfly-", "")
             break
 
 
