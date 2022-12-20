@@ -16,6 +16,9 @@ between all team members.
 * **config runners:** config files with test run launchers for pycharm professional.
 
 * **Setup:** requirement file, it allows to install all the libraries to execute the test suite.
+* Clone the repository in any local path
+* Execute the following command: $ pip install -r <your_path>/requirements.txt
+* Install allure with brew: $ brew install allure
 
 * **src:**
      * allure: folder to storage the test reports. 
@@ -26,3 +29,7 @@ between all team members.
 
 * [Qase](https://app.qase.io/project/BLING): Test management and repository tool to define all scenarios (manual and automated).
 * **Allure reporter**: Tool to view the test results and logs in a pretty html report, integrated with jenkins CI/CD builds.
+
+
+## Test execution
+* behave -D platform=web -D headless=false -k -f allure_behave.formatter:AllureFormatter -o ./src/allure ./src/frontend/highlifeshop
