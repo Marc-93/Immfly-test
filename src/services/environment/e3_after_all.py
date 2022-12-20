@@ -68,7 +68,7 @@ def generate_executor_file(context):
             f.write("{" + f'\n"name": "{executor}",\n'
                           f'"type": "jenkins",\n'
                           f'"buildName": "allure-report_deploy",\n'
-                          f'"buildUrl": "https://jenkins.prod.bling.eu/view/QA/"\n' + "}")
+                          f'"buildUrl": "https://www.jenkins.io//"\n' + "}")
     except:
         FormattedPrint("Allure", "Executor not created").pink()
 
