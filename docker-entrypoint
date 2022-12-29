@@ -2,7 +2,7 @@
 
 set -e
 
-file_list=("qa" "backend/risk" "backend/core")
+file_list=("frontend/functionalities" "backend/x")
 
 
 for py_file in "${file_list[@]}"
