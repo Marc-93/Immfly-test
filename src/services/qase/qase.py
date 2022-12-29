@@ -9,7 +9,7 @@ from datetime import date
 from src.services.read_params.json_util import JsonUtil
 
 qase_admin_token = "00fe36d10fca731d326cb9b9b8641970d8fc7355"
-qase_project_id = 'IMMFLY'
+qase_project_id = 'TEST'
 
 headers = {
     "Accept": "application/json",
@@ -28,11 +28,11 @@ class Qase:
         :param server: dev, localhost
         :return: test_run_id
         """
-        title = f"[IMMFLy] Front end tests - {current_date}"
+        title = f"[TEST] Front end tests - {current_date}"
 
         payload = json.dumps({
             "title": title,
-            "description": "E2E Immfly test cases.",
+            "description": "E2E test cases.",
             "cases": [1]
         })
 

@@ -32,4 +32,4 @@ between all team members.
 
 
 ## Test execution
-* behave -D platform=web -D headless=false -k -f allure_behave.formatter:AllureFormatter -o ./src/allure ./src/frontend/highlifeshop
+* behave -D platform=web -D headless=false -k -f allure_behave.formatter:AllureFormatter -o ./src/allure ./src/frontend/functionality

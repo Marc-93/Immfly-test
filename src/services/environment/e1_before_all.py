@@ -12,7 +12,7 @@ from src.services.qase.qase import Qase
 def print_test_execution_info():
     """Prints company name with ASCII art text"""
     custom_fig = Figlet(font='larry3d')
-    print(custom_fig.renderText("IMMFLY"))
+    print(custom_fig.renderText("TEST"))
 
 
 def set_execution_logs(context):
@@ -39,7 +39,7 @@ def set_execution_platform(context):
         get_web_param_headless(context)
 
         # Sets the webapp url according to server
-        context.site_url = "https://highlifeshop.com/"
+        context.site_url = "https://google.com/"
         FormattedPrint("web", f"url --> {context.site_url}").pink()
 
         # Saves the needed capabilities before starting the web driver

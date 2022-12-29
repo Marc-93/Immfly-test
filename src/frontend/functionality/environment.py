@@ -51,7 +51,7 @@ def after_all(context):
     close_qase_test_run(context)
 
     # Generates environment file for adding info in allure report
-    generate_environment_file(context, "Immfly")
+    generate_environment_file(context, "Test")
 
     # Generates executor file for adding info in allure report
     generate_executor_file(context)

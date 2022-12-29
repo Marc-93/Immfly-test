@@ -39,12 +39,12 @@ def generate_environment_file(context, platform):
         # If qase is active, this will display the qase public report on allure
         if context.initialize_qase is True:
             with open(output_path, 'w') as f:
-                f.write(F'Platform=web\nUrl=https://highlifeshop.com/speedbird-cafe\nQase={context.qase_url}')
+                f.write(F'Platform=web\nUrl=https://google.com/\nQase={context.qase_url}')
 
         # If qase is not active, this will display a message saying that qase is not published.
         elif context.initialize_qase is False:
             with open(output_path, 'w') as f:
-                f.write(F'Platform=web\nUrl=https://highlifeshop.com/speedbird-cafe\nQase=Test run not published')
+                f.write(F'Platform=web\nUrl=https://google.com/\nQase=Test run not published')
     except Exception as e:
         print(e)
         FormattedPrint("Allure", "Environment not created").pink()
