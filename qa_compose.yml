@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  qa:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: bling_qa_e2e
+    shm_size: '2gb'
+    volumes:
+      - "${ALLURE_RESULT_PATH_JENKINS_VOLUME}:${ALLURE_RESULT_PATH_DOCKER_VOLUME}"
+    env_file:
+      - ./.envs/.pre/.vars
+    ports:
+      - "8000:8000"

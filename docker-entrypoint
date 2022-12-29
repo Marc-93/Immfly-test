@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+file_list=("qa" "backend/risk" "backend/core")
+
+
+for py_file in "${file_list[@]}"
+do
+    python3 -u -m behave -D qase=false -D server=pre ./src/${py_file} -t=regression -f allure_behave.formatter:AllureFormatter -o ./src/allure/ || true;
+done
