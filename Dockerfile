@@ -1,11 +1,7 @@
 ARG PYTHON_VERSION=3.9-slim-buster
 FROM python:${PYTHON_VERSION} as python
 
-ARG BUILD_ENVIRONMENT=pre
-
-ENV APP_HOME=/home/bling_qa
-ENV RUN_TEST_FROM=JENKINS
-ENV BUILD_ENV ${BUILD_ENVIRONMENT}
+ENV APP_HOME=/home/python_behave_template
 
 # Install chrome
 RUN set -ex; \
