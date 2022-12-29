@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    container_name: bling_qa_e2e
+    container_name: xxxx
     shm_size: '2gb'
     volumes:
       - "${ALLURE_RESULT_PATH_JENKINS_VOLUME}:${ALLURE_RESULT_PATH_DOCKER_VOLUME}"
