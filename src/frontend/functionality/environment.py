@@ -8,7 +8,7 @@ from src.services.environment.e3_after_all import close_qase_test_run, generate_
 
 
 def before_all(context):
-    # Prints Bling with ASCII art text
+    # Prints title with ASCII art text
     print_test_execution_info()
 
     # Sets log for test execution

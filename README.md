@@ -27,7 +27,7 @@ between all team members.
 
 ## Reporting tools:
 
-* [Qase](https://app.qase.io/project/BLING): Test management and repository tool to define all scenarios (manual and automated).
+* [Qase](https://app.qase.io/project/): Test management and repository tool to define all scenarios (manual and automated).
 * **Allure reporter**: Tool to view the test results and logs in a pretty html report, integrated with jenkins CI/CD builds.
 
 

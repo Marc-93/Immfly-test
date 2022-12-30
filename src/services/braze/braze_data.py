@@ -8,7 +8,7 @@ class BrazeData:
 
         :return: braze dev url
         """
-        return "https://rest.fra-01.braze.eu/"
+        return "https://rest.braze.eu/"
 
     def get_braze_token(self, site):
         """Gets the value from specific site to return the Braze token.
@@ -18,15 +18,13 @@ class BrazeData:
         """
         token = ""
         if str(site).lower() == "web":
-            token = get_secret('dev/braze/web')
+            token = get_secret('secret_path')
         elif str(site).lower() == "android":
-            token = get_secret("dev/braze/android")
+            token = get_secret("secret_path")
         elif str(site).lower() == "ios":
             token = get_secret("dev/braze/ios")
-        elif str(site).lower() == "backend_subscription":
-            token = get_secret("dev/sherwoodcore/BLING_BRAZE_SUBSCRIPTION_API_KEY")
-        elif str(site).lower() == "backend_user":
-            token = get_secret("dev/sherwoodcore/BLING_BRAZE_USER_API_KEY")
+        elif str(site).lower() == "backend":
+            token = get_secret("secret_path")
         else:
             Logger("[Braze] Site or key not valid!").substep_failed()
 

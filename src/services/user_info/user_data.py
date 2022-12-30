@@ -1,8 +1,9 @@
 import random
 from faker import Faker
 
-from src.shared_utils.logs.logger import Logger
-from src.shared_utils.test_data.countries_list import bling_countries
+from src.services.logs.logger import Logger
+
+country_list = ['es', 'fr']
 
 
 class UserData:
@@ -45,8 +46,8 @@ class UserData:
 
         :return: random country from allowed list
         """
-        random_country_index = random.randint(0, len(bling_countries) - 1)
-        country = bling_countries[random_country_index]
+        random_country_index = random.randint(0, len(country_list) - 1)
+        country = country_list[random_country_index]
         return country
 
     def random_phone(self, user_country):
@@ -56,7 +57,7 @@ class UserData:
         :return: user phone number.
         """
         l_user_country = str(user_country).lower()
-        if l_user_country in bling_countries:
+        if l_user_country in country_list:
             if l_user_country == 'es':
                 return self.__create_sp_phone()
             if l_user_country == 'fr':
